@@ -4,7 +4,7 @@ import { compress, decompress } from "../utils/compressor.js";
 import { chunkFile, reassembleChunks } from "../utils/chunker.js";
 import { useParams, useLocation } from "react-router-dom";
 
-const SIGNALING_SERVER = "ws://localhost:5000";
+const SIGNALING_SERVER = "wss://filetaco.onrender.com";
 
 function bufferToBase64(buffer) {
   let binary = '';
