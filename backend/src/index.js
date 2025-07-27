@@ -6,12 +6,12 @@ import { setupSignaling } from "./signalling.js";
 
 const app = express();
 app.use(cors({
-  origin: ["https://your-frontend-url.vercel.app","http://localhost:5173"]
+  origin: ["https://file-taco.vercel.app/","http://localhost:5173"]
 }));
 
 const server = http.createServer(app);
 setupSignaling(server);
 
 server.listen(5000, () => {
-  console.log("✅ Server running on http://localhost:5000");
+  console.log("✅ Server running");
 });
