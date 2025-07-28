@@ -48,7 +48,7 @@ const FileTransfer = ({ isSender }) => {
   const [file, setFile] = useState(isSender ? location.state?.file : null);
   const [receivedFileMeta, setReceivedFileMeta] = useState(null);
   const [downloadUrl, setDownloadUrl] = useState(null);
-  const [status, setStatus] = useState("Connecting to signaling server...");
+  const [status, setStatus] = useState("Connecting to signaling server..."+'\n'+"may take a minute(deployed on Render).");
   const [peerConnected, setPeerConnected] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -298,6 +298,8 @@ const FileTransfer = ({ isSender }) => {
           <div style={{ marginBottom: "20px" }}>
             <h3>File to send:</h3>
             <p>📁 {file.name} ({(file.size / 1024 / 1024).toFixed(2)} MB)</p>
+            <br/>
+            <p>//Don’t close this tab — your Taco’s journey is in progress!</p>
           </div>
         )}
 
